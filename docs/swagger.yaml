@@ -1,0 +1,39 @@
+basePath: /api/
+host: localhost:8080
+info:
+  contact: {}
+  description: this is an example of using swagger with gin framework in golang
+  termsOfService: http://swagger.io/terms
+  version: "1.0"
+paths:
+  /api/hello:
+    get:
+      consumes:
+      - application/json
+      description: Return Hello response
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: hello world
+          schema:
+            type: string
+      summary: Show a hello message
+      tags:
+      - hello
+  /api/ping:
+    get:
+      consumes:
+      - application/json
+      description: Get ping pong response
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: pong
+          schema:
+            type: string
+      summary: Show a ping pong message
+      tags:
+      - ping
+swagger: "2.0"
